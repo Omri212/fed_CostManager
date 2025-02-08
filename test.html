@@ -6,11 +6,11 @@
 </head>
 <body>
   <!-- Use type="module" to load the ES6 JavaScript file -->
-  <script type="module" src="./idb.js"></script>
+  <script type="module" src="/idb.js"></script>
 
   <script type="module">
     // Since we used "type=module", we can use "import"
-    import { defineIdb, addingCost } from './idb.js';
+    import { defineIdb, addingCost } from '/idb.js';
 
     async function test() {
       const db = await defineIdb("costsdb", "costs");

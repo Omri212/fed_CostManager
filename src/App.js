@@ -24,7 +24,7 @@ const App = () => {
    */
   const handleAddCost = async (costItem) => {
     await addingCost(DB_NAME, STORE_NAME, costItem);
-    alert("Cost added successfully!");
+    alert("Cost Added Successfully");
   };
 
   /**

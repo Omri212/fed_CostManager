@@ -49,7 +49,8 @@ export const performTransaction = (db, storeName, mode, callback) => {
  *
  * @param {string} dbName - The name of the database.
  * @param {string} storeName - The name of the object store.
- * @param {Object} costItem - The cost item to add, containing details like `sum`, `category`, `description`, and `date`.
+ * @param {Object} costItem - The cost item to add, containing details like `sum`,
+ *  `category`, `description`, and `date`.
  * @returns {Promise<number>} A promise that resolves with the ID of the added item.
  */
 export const addingCost = async (dbName, storeName, costItem) => {
@@ -66,7 +67,8 @@ export const addingCost = async (dbName, storeName, costItem) => {
  * @param {string} storeName - The name of the object store.
  * @param {number} month - The month to filter costs (1-12).
  * @param {number} year - The year to filter costs.
- * @returns {Promise<Object[]>} A promise that resolves with an array of cost items for the specified month and year.
+ * @returns {Promise<Object[]>} A promise that resolves with an array of cost items for
+ *  the specified month and year.
  */
 export const getMonthlyCosts = async (dbName, storeName, month, year) => {
   const db = await defineIdb(dbName, storeName);
@@ -99,7 +101,8 @@ export const getMonthlyCosts = async (dbName, storeName, month, year) => {
  * @param {string} storeName - The name of the object store.
  * @param {number} month - The month to filter costs (1-12).
  * @param {number} year - The year to filter costs.
- * @returns {Promise<Object>} A promise that resolves with an object where keys are categories and values are the total sums.
+ * @returns {Promise<Object>} A promise that resolves with an object where keys are categories 
+ * and values are the total sums.
  */
 export const getCostsByCategory = async (dbName, storeName, month, year) => {
   const costs = await getMonthlyCosts(dbName, storeName, month, year);

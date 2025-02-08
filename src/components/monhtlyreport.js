@@ -6,7 +6,8 @@ import { Typography, Box, Button, MenuItem, Select } from "@mui/material";
  *
  * @param {Object} props - Component props.
  * @param {Array} props.costs - List of costs for the month.
- * @param {Function} props.onFetchCosts - Function to fetch costs for a specific month and year.
+ * @param {Function} props.onFetchCosts - Function to fetch costs for 
+ * a specific month and year.
  */
 const MonthlyReport = ({ costs, onFetchCosts }) => {
   const currentMonth = new Date().getMonth() + 1; // Current month (1-12)

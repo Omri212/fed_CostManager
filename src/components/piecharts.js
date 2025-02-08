@@ -10,7 +10,8 @@ ChartJS.register(ArcElement, Tooltip, Legend);
  * Component to display a pie chart for visualizing cost distribution by category.
  *
  * @param {Object} props - The component props.
- * @param {Object} props.chartData - An object where keys are cost categories and values are the total costs for those categories.
+ * @param {Object} props.chartData - An object where keys are cost categories
+ *  and values are the total costs for those categories.
  * @returns {JSX.Element} The rendered PieChart component.
  */
 const PieChart = ({ chartData }) => {

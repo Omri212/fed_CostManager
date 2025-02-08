@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+  <!-- Use type="module" to load the ES6 JavaScript file -->
+  <script type="module" src="./idb.js"></script>
+
+  <script type="module">
+    // Since we used "type=module", we can use "import"
+    import { defineIdb, addingCost } from './idb.js';
+
+    async function test() {
+      const db = await defineIdb("costsdb", "costs");
+
+      const result1 = await addingCost("costsdb", "costs", {
+        sum: 200,
+        category: "FOOD",
+        description: "pizza"
+      });
+
+      const result2 = await addingCost("costsdb", "costs", {
+        sum: 400,
+        category: "CAR",
+        description: "fuel"
+      });
+
+      if (db) {
+        console.log("creating db succeeded");
+      }
+
+      if (result1) {
+        console.log("adding 1st cost item succeeded");
+      }
+
+      if (result2) {
+        console.log("adding 2nd cost item succeeded");
+      }
+    }
+
+    test();
+  </script>
+</body>
+</html>
